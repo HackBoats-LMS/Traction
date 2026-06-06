@@ -10,17 +10,20 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="relative flex items-center justify-between px-6 md:px-10 py-4 w-full bg-[#F5F5F7]/80 backdrop-blur-md border-b border-black/5 z-50">
+    <nav className="relative flex items-center justify-between px-6 md:px-10 py-4 w-full bg-white/90 backdrop-blur-md border-b border-black/5 z-50">
       <Link href="/" className="flex items-center">
-        <img
+        <Image
           src="/traction-logo.png"
           alt="Traction Logo"
-          className="w-32 sm:w-40 md:w-48 h-auto object-contain invert hue-rotate-180 opacity-90"
+          width={200}
+          height={60}
+          className="w-32 sm:w-40 md:w-48 h-auto object-contain invert hue-rotate-180"
+          priority
         />
       </Link>
 
       {/* Desktop Links - Centered between Logo and Button */}
-      <div className="hidden md:flex items-center gap-12 mr-12">
+      <div className="hidden md:flex items-center gap-6 lg:gap-10 mr-4 lg:mr-8">
         <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} className="text-sm font-medium text-black hover:opacity-70 transition-colors">
           Green Tool
         </Link>
