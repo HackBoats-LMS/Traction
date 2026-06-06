@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   const scrollToNext = () => {
-    const element = document.getElementById('next-section');
+    const element = document.getElementById('our-products');
     if (element) {
       const y = element.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top: y, behavior: 'smooth' });

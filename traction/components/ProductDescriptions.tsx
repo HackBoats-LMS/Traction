@@ -38,7 +38,7 @@ const products = [
 
 export default function ProductDescriptions() {
   return (
-    <section className="w-full bg-transparent py-24">
+    <section id="our-products" className="w-full bg-transparent py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-black mb-6 text-[#1D1D1F]">Our Products</h2>
