@@ -33,13 +33,13 @@ export default function Navbar() {
 
       {/* Desktop Links - Centered between Logo and Button */}
       <div className="hidden md:flex items-center gap-6 lg:gap-10 mr-4 lg:mr-8">
-        <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} className="text-sm font-medium text-black hover:opacity-70 transition-colors">
+        <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-black hover:opacity-70 transition-colors">
           Green Tool
         </Link>
-        <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} className="text-sm font-medium text-black hover:opacity-70 transition-colors">
+        <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-black hover:opacity-70 transition-colors">
           one-to-one
         </Link>
-        <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="text-sm font-medium text-black hover:opacity-70 transition-colors">
+        <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-black hover:opacity-70 transition-colors">
           NearBy
         </Link>
       </div>
@@ -75,13 +75,13 @@ export default function Navbar() {
             className="absolute top-full left-0 w-full bg-[#F5F5F7] shadow-xl overflow-hidden md:hidden border-b border-black/5"
           >
             <div className="flex flex-col px-6 py-6 gap-6">
-              <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
                 Green Tool
               </Link>
-              <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
                 one-to-one
               </Link>
-              <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
                 NearBy
               </Link>
               <button 

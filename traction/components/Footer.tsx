@@ -25,26 +25,24 @@ export default function Footer() {
         <div className="col-span-1">
           <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Products</h4>
           <ul className="space-y-2 md:space-y-3">
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Green Tool</Link></li>
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">1-2-1 Conclave</Link></li>
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Nearby Network</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Green Tool</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">1-2-1 Conclave</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Nearby Network</Link></li>
           </ul>
         </div>
 
         <div className="col-span-1">
           <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Company</h4>
           <ul className="space-y-2 md:space-y-3">
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">About Us</Link></li>
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Careers</Link></li>
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Contact Support</Link></li>
+            <li><Link href="mailto:support@hackboats.com" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Contact Support</Link></li>
           </ul>
         </div>
 
         <div className="col-span-2 md:col-span-1">
           <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Legal</h4>
           <ul className="space-y-2 md:space-y-3 flex flex-col sm:flex-row sm:space-y-0 sm:gap-6 md:flex-col md:space-y-3 md:gap-0">
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Privacy Policy</Link></li>
-            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Terms of Service</Link></li>
+            <li><Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Privacy Policy</Link></li>
+            <li><Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Terms of Service</Link></li>
           </ul>
         </div>
       </div>
@@ -62,13 +60,15 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-3 pl-0 md:pl-6 border-l-0 md:border-l border-white/10 pt-4 md:pt-0 w-full md:w-auto justify-center md:justify-start border-t md:border-t-0">
             <span className="text-gray-400 text-xs md:text-sm uppercase tracking-widest font-bold">Powered by</span>
-            <Image
-              src="/hb-logo.png"
-              alt="HB Logo"
-              width={128}
-              height={40}
-              className="w-20 sm:w-28 md:w-32 h-auto object-contain brightness-110"
-            />
+            <Link href="https://www.hackboats.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <Image
+                src="/hb-logo.png"
+                alt="HB Logo"
+                width={128}
+                height={40}
+                className="w-20 sm:w-28 md:w-32 h-auto object-contain brightness-110"
+              />
+            </Link>
           </div>
         </div>
       </div>

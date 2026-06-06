@@ -39,7 +39,7 @@ export default function ProductsAccordion() {
                     className="overflow-hidden bg-[#F5F5F7]"
                   >
                     <div className="w-full flex justify-center border-t border-black/5">
-                      <Link href={tab.url || "#"} className="w-full flex justify-center">
+                      <Link href={tab.url || "#"} target="_blank" rel="noopener noreferrer" className="w-full flex justify-center">
                         <Image
                           src={tab.image}
                           alt={tab.label}
