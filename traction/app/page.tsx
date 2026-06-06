@@ -13,13 +13,12 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      {/* Desktop Grid Layout */}
-      <FeaturesGrid />
-
-      {/* Mobile/Tablet Stack View */}
-      <div className="flex flex-col xl:hidden">
-        <Ecosystem isGridMode={false} />
-        <ProductsAccordion />
+      <div id="next-section">
+        <FeaturesGrid />
+        <div className="flex flex-col xl:hidden">
+          <Ecosystem isGridMode={false} />
+          <ProductsAccordion />
+        </div>
       </div>
 
       {/* Detailed Product Descriptions */}
