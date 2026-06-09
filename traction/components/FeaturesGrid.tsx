@@ -8,7 +8,7 @@ export default function FeaturesGrid() {
       <div className="grid grid-cols-2 w-full max-w-[1400px]">
         {/* Top Left: Green Tool Image */}
         <div className="border border-black/10 flex items-center justify-center group p-0">
-          <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center">
+          <Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} className="w-full h-full flex items-center">
             <img
               src="/images/green-tool.png"
               alt="Green Tool Dashboard"
