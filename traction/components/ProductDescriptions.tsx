@@ -63,7 +63,12 @@ export default function ProductDescriptions() {
                 <p className="text-[#86868B] text-lg leading-relaxed max-w-lg">
                   {product.description}
                 </p>
-                <Link href={product.url || "#"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors mt-4">
+                <Link 
+                  href={product.url || "#"} 
+                  target={product.url?.startsWith('/') ? undefined : "_blank"} 
+                  rel={product.url?.startsWith('/') ? undefined : "noopener noreferrer"} 
+                  className="inline-flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors mt-4"
+                >
                   Learn more <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
