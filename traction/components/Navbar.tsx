@@ -39,7 +39,7 @@ export default function Navbar() {
         <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-black hover:opacity-70 transition-colors">
           one-to-one
         </Link>
-        <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-black hover:opacity-70 transition-colors">
+        <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="text-sm font-medium text-black hover:opacity-70 transition-colors">
           NearBy
         </Link>
       </div>
@@ -81,7 +81,7 @@ export default function Navbar() {
               <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
                 one-to-one
               </Link>
-              <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
                 NearBy
               </Link>
               <button 

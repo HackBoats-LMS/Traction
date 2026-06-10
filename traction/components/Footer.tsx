@@ -27,7 +27,7 @@ export default function Footer() {
           <ul className="space-y-2 md:space-y-3">
             <li><Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Green Tool</Link></li>
             <li><Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">1-2-1 Conclave</Link></li>
-            <li><Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Nearby Network</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Nearby Network</Link></li>
           </ul>
         </div>
 
