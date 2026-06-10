@@ -13,7 +13,7 @@ const options = {
   maxIdleTimeMS: 30000,
   serverApi: {
     version: ServerApiVersion.v1,
-    strict: true,
+    strict: false,
     deprecationErrors: true,
   }
 };
