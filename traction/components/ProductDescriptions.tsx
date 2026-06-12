@@ -20,19 +20,19 @@ const products = [
     subtitle: 'Structured Meetings & ROI',
     description: 'Wipe out unstructured networking. 1-2-1 Conclave orchestrates real-time, round-based matchmaking events so you can pitch to active leads and exchange digital referrals instantly.',
     icon: <HeartHandshake className="w-8 h-8 text-green-600" />,
-    image: '/images/1-2-1.png',
+    image: '/images/onetoone.png',
     reverse: true,
     url: process.env.NEXT_PUBLIC_ONE_TO_ONE_URL,
   },
   {
-    id: 'nearby',
-    title: 'Nearby Network',
+    id: 'atlas',
+    title: 'Atlas',
     subtitle: 'Discover Local Opportunities',
     description: 'Find and connect with business professionals in your immediate vicinity. Our global network brings local connections directly to your device, wherever your travels take you.',
     icon: <MapPin className="w-8 h-8 text-green-600" />,
-    image: '/images/nearby.png',
+    image: '/images/atlas1.png',
     reverse: false,
-    url: process.env.NEXT_PUBLIC_NEARBY_URL,
+    url: process.env.NEXT_PUBLIC_ATLAS_URL,
   }
 ];
 

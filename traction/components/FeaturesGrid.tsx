@@ -30,7 +30,7 @@ export default function FeaturesGrid() {
         <div className="border border-black/10 flex items-center justify-center group p-0">
           <Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center">
             <Image
-              src="/images/1-2-1.png"
+              src="/images/onetoone.png"
               alt="1-2-1 Conclave Interface"
               width={1600}
               height={1000}
@@ -39,12 +39,12 @@ export default function FeaturesGrid() {
           </Link>
         </div>
 
-        {/* Bottom Right: Nearby Image */}
+        {/* Bottom Right: Atlas Image */}
         <div className="border border-black/10 flex items-center justify-center group p-0">
           <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="w-full h-full flex items-center">
             <Image
-              src="/images/nearby.png"
-              alt="Nearby Network Interface"
+              src="/images/atlas1.png"
+              alt="Atlas Network Interface"
               width={1600}
               height={1000}
               className="w-full h-auto object-cover"

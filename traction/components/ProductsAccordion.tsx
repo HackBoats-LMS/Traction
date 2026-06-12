@@ -7,12 +7,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ProductsAccordion() {
-  const [activeTab, setActiveTab] = useState('Nearby');
+  const [activeTab, setActiveTab] = useState('Atlas');
 
   const tabs = [
     { id: 'Green Tool', label: 'Green Tool', image: '/images/green-tool.png', url: process.env.NEXT_PUBLIC_GREEN_TOOL_URL },
     { id: 'one-to-one', label: 'one-to-one', image: '/images/1-2-1.png', url: process.env.NEXT_PUBLIC_ONE_TO_ONE_URL },
-    { id: 'Nearby', label: 'Nearby', image: '/images/nearby.png', url: process.env.NEXT_PUBLIC_NEARBY_URL },
+    { id: 'Atlas', label: 'Atlas', image: '/atlaslogo.png', url: process.env.NEXT_PUBLIC_NEARBY_URL },
   ];
 
   return (

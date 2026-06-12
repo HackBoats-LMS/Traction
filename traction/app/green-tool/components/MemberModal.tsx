@@ -190,7 +190,7 @@ export default function MemberModal({ member, allMonthlyData = [], comparisonDat
 
       let tractionLogoDataUrl = null;
       try {
-        const res = await fetch('/traction-logo.png');
+        const res = await fetch('/atlaslogo.png');
         const blob = await res.blob();
         const base64Url = await new Promise((resolve) => {
           const reader = new FileReader();

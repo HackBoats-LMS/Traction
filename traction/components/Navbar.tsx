@@ -40,7 +40,7 @@ export default function Navbar() {
           one-to-one
         </Link>
         <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="text-sm font-medium text-black hover:opacity-70 transition-colors">
-          NearBy
+          Atlas
         </Link>
       </div>
 
@@ -82,7 +82,7 @@ export default function Navbar() {
                 one-to-one
               </Link>
               <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} onClick={() => setIsMenuOpen(false)} className="text-lg font-bold text-black hover:opacity-70 transition-colors">
-                NearBy
+                Atlas
               </Link>
               <button 
                 onClick={scrollToNext}

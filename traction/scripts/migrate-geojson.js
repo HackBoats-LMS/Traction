@@ -2,9 +2,9 @@ require('dotenv').config({ path: '.env' });
 const { MongoClient } = require('mongodb');
 
 async function migrate() {
-  const uri = process.env.NEARBY_MONGODB_URI;
+  const uri = process.env.ATLAS_MONGODB_URI;
   if (!uri) {
-    console.error('Missing NEARBY_MONGODB_URI in .env');
+    console.error('Missing ATLAS_MONGODB_URI in .env');
     process.exit(1);
   }
 
