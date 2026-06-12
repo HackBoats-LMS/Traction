@@ -4,9 +4,9 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="bg-[#1D1D1F] text-white py-8 md:py-16 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8 md:gap-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-x-8 gap-y-10">
         {/* Brand Section */}
-        <div className="col-span-2 md:col-span-1">
+        <div className="sm:col-span-2 lg:col-span-2">
           <div className="mb-4 md:mb-6">
             <Image
               src="/traction-logo.png"
@@ -22,27 +22,44 @@ export default function Footer() {
         </div>
 
         {/* Links Columns */}
-        <div className="col-span-1">
+        <div className="sm:col-span-1 lg:col-span-1">
           <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Products</h4>
           <ul className="space-y-2 md:space-y-3">
-            <li><Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Green Tool</Link></li>
-            <li><Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">1-2-1 Conclave</Link></li>
-            <li><Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Nearby Network</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_GREEN_TOOL_URL || "#"} className="text-gray-400 hover:text-white transition-colors text-sm">Green Tool</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_ONE_TO_ONE_URL || "#"} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm">1-2-1 Conclave</Link></li>
+            <li><Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} className="text-gray-400 hover:text-white transition-colors text-sm">Atlas</Link></li>
           </ul>
         </div>
 
-        <div className="col-span-1">
-          <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Company</h4>
-          <ul className="space-y-2 md:space-y-3">
-            <li><Link href="mailto:support@hackboats.com" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Contact Support</Link></li>
+        <div className="sm:col-span-1 lg:col-span-2">
+          <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Contact Info</h4>
+          <ul className="space-y-3 text-gray-400 text-sm">
+            <li className="flex items-center gap-2">
+              <span>✉️</span>
+              <Link href="mailto:official@hackboats.com" className="hover:text-white transition-colors hover:underline">official@hackboats.com</Link>
+            </li>
+            <li className="flex items-start gap-2">
+              <span>📞</span>
+              <span>+91 8886099957<br/>+91 8886099927</span>
+            </li>
+            <li className="pt-2 border-t border-white/10 mt-3 flex flex-col gap-1.5">
+              <div className="flex gap-2 whitespace-nowrap">
+                <span className="text-white">Mahan:</span>
+                <Link href="mailto:mhrk.iot@gmail.com" className="hover:text-white transition-colors hover:underline">mhrk.iot@gmail.com</Link>
+              </div>
+              <div className="flex gap-2 whitespace-nowrap">
+                <span className="text-white">Yaswanth:</span>
+                <Link href="mailto:yaswanth45a7@gmail.com" className="hover:text-white transition-colors hover:underline">yaswanth45a7@gmail.com</Link>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <div className="col-span-2 md:col-span-1">
+        <div className="sm:col-span-1 lg:col-span-1">
           <h4 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">Legal</h4>
-          <ul className="space-y-2 md:space-y-3 flex flex-col sm:flex-row sm:space-y-0 sm:gap-6 md:flex-col md:space-y-3 md:gap-0">
-            <li><Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Privacy Policy</Link></li>
-            <li><Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm">Terms of Service</Link></li>
+          <ul className="space-y-2 md:space-y-3 flex flex-col">
+            <li><Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link></li>
+            <li><Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link></li>
           </ul>
         </div>
       </div>

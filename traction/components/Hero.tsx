@@ -31,7 +31,7 @@ export default function Hero() {
           Discover <span className="text-[#EF4444]">Opportunities</span>.
         </h1>
         <p className="text-[#86868B] text-sm md:text-base font-medium max-w-[550px] mx-auto mb-6 leading-relaxed">
-          Traction brings together performance analytics, one-to-one networking, and nearby business discovery—helping members build stronger relationships and generate more opportunities.
+          Traction brings together performance analytics, one-to-one networking, and Atlas business discovery—helping members build stronger relationships and generate more opportunities.
         </p>
         <button 
           onClick={scrollToNext}

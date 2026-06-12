@@ -7,8 +7,8 @@ export default function BniConnect({ isGridMode = false }: { isGridMode?: boolea
       <div className={`relative w-full h-full ${isGridMode ? 'max-w-full max-h-full' : 'max-w-4xl min-h-[400px] mx-auto'}`}>
         <Link href={process.env.NEXT_PUBLIC_NEARBY_URL || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full block hover:opacity-90 transition-opacity relative">
           <Image
-            src="/images/nearby.png"
-            alt="Nearby Network"
+            src="/atlaslogo.png"
+            alt="Atlas Network"
             fill
             className="object-contain"
           />

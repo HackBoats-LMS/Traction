@@ -16,9 +16,9 @@ export default function Ecosystem({ isGridMode = false }: { isGridMode?: boolean
     },
     {
       icon: <MapPin className="w-6 h-6 text-green-600" />,
-      label: "Nearby",
+      label: "Atlas",
       title: "Discover Opportunities",
-      desc: "Nearby Networking"
+      desc: "Atlas Networking"
     }
   ];
 

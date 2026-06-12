@@ -4,8 +4,8 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 const REPLACEMENTS = [
-  { from: /@\/nearby-stores\/use-auth-store/g, to: '@/nearby-stores/nearby-auth-store' },
-  { from: /@\/nearby-stores\/use-location-store/g, to: '@/nearby-stores/nearby-location-store' }
+  { from: /@\/atlas-stores\/use-auth-store/g, to: '@/atlas-stores/atlas-auth-store' },
+  { from: /@\/atlas-stores\/use-location-store/g, to: '@/atlas-stores/atlas-location-store' }
 ];
 
 function walk(dir, callback) {
