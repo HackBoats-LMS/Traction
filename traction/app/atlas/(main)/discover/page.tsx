@@ -538,72 +538,73 @@ function DiscoverContent() {
                     exit={{ y: '100%' }}
                     className="fixed inset-x-0 bottom-0 top-16 z-[9999] bg-white overflow-y-auto flex flex-col"
                   >
-                    {/* Sticky Top Header */}
-                    <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex items-center justify-between shadow-sm">
-                      <h3 className="font-bold text-gray-900 text-lg">Business Details</h3>
+                    {/* Header Banner (Matches Desktop) */}
+                    <div className="h-28 relative flex items-end justify-between p-5 shrink-0" style={{ backgroundColor: `${selectedCategory.color}20` }}>
                       <button 
                         onClick={() => setSelectedMember(null)}
-                        className="bg-gray-100 p-2 rounded-full text-gray-500 hover:bg-gray-200 transition-colors"
+                        className="absolute top-4 right-4 bg-white/70 hover:bg-white p-2 rounded-full text-gray-700 shadow-sm transition-colors"
                       >
                         <X size={20} />
                       </button>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="p-6 pt-6 pb-safe">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${selectedCategory.color}20`, color: selectedCategory.color }}>
-                        <SelectedIcon size={24} />
+                      <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center -mb-8 relative z-10 border border-gray-100" style={{ color: selectedCategory.color }}>
+                        <SelectedIcon size={32} />
                       </div>
-                      <div>
+                    </div>
+
+                    {/* Content (Matches Desktop) */}
+                    <div className="pt-12 p-6 pb-24 overflow-y-auto flex-1">
+                      <div className="mb-1">
                         <span className="text-[10px] font-bold tracking-wider uppercase" style={{ color: selectedCategory.color }}>
                           {selectedMember.customCategory ? selectedMember.customCategory : selectedCategory.name}
                         </span>
-                        <h2 className="text-lg font-extrabold text-gray-900 leading-tight">{selectedMember.name}</h2>
                       </div>
-                    </div>
+                      <h2 className="text-2xl font-extrabold text-gray-900 mb-2 leading-tight">{selectedMember.name}</h2>
+                      
+                      {selectedMember.bio && (
+                        <p className="text-sm text-gray-600 mb-6 leading-relaxed">{selectedMember.bio}</p>
+                      )}
 
-                    <div className="space-y-3 mb-5">
-                      {selectedMember.phone && (
-                        <div className="flex items-center gap-3">
-                          <Phone size={14} className="text-gray-400 shrink-0" />
-                          <a href={`tel:${selectedMember.phone}`} className="text-sm font-medium text-gray-800">{selectedMember.phone}</a>
+                      <div className="space-y-4 mt-4 bg-gray-50 p-4 rounded-2xl">
+                        {selectedMember.phone && (
+                          <div className="flex items-start gap-3">
+                            <Phone size={16} className="text-gray-400 mt-0.5 shrink-0" />
+                            <a href={`tel:${selectedMember.phone}`} className="text-sm font-medium text-gray-800 hover:text-[#e62e3d]">{selectedMember.phone}</a>
+                          </div>
+                        )}
+                        {selectedMember.email && (
+                          <div className="flex items-start gap-3">
+                            <Mail size={16} className="text-gray-400 mt-0.5 shrink-0" />
+                            <a href={`mailto:${selectedMember.email}`} className="text-sm font-medium text-gray-800 hover:text-blue-600">{selectedMember.email}</a>
+                          </div>
+                        )}
+                        <div className="flex items-start gap-3">
+                          <MapPin size={16} className="text-gray-400 mt-0.5 shrink-0" />
+                          <span className="text-sm font-medium text-gray-800">
+                            {selectedMember.address ? `${selectedMember.address}, ` : ''}{selectedMember.city}
+                          </span>
                         </div>
-                      )}
-                      {selectedMember.email && (
-                        <div className="flex items-center gap-3">
-                          <Mail size={14} className="text-gray-400 shrink-0" />
-                          <a href={`mailto:${selectedMember.email}`} className="text-sm font-medium text-gray-800 truncate">{selectedMember.email}</a>
-                        </div>
-                      )}
-                      <div className="flex items-center gap-3">
-                        <MapPin size={14} className="text-gray-400 shrink-0" />
-                        <span className="text-sm font-medium text-gray-800 truncate">
-                          {selectedMember.address ? `${selectedMember.address}, ` : ''}{selectedMember.city}
-                        </span>
                       </div>
-                    </div>
 
-                    <div className="flex flex-col gap-2">
-                      <a 
-                        href={selectedMember.googleMapsLink || `https://www.google.com/maps/search/?api=1&query=${selectedMember.latitude},${selectedMember.longitude}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full bg-[#fce9ea] text-[#e62e3d] font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm"
-                      >
-                        <Globe size={16} />
-                        View on Google Maps
-                      </a>
-                      <a 
-                        href={`https://www.google.com/maps/dir/?api=1&destination=${selectedMember.latitude},${selectedMember.longitude}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full bg-[#e62e3d] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm"
-                      >
-                        <Navigation size={16} />
-                        Get Directions
-                      </a>
-                    </div>
+                      <div className="mt-8 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                        <a 
+                          href={selectedMember.googleMapsLink || `https://www.google.com/maps/search/?api=1&query=${selectedMember.latitude},${selectedMember.longitude}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full bg-[#fce9ea] hover:bg-[#fad1d4] text-[#e62e3d] font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-colors text-sm shadow-sm"
+                        >
+                          <Globe size={18} />
+                          View on Google Maps
+                        </a>
+                        <a 
+                          href={`https://www.google.com/maps/dir/?api=1&destination=${selectedMember.latitude},${selectedMember.longitude}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full bg-[#e62e3d] hover:bg-[#d02432] text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-colors text-sm shadow-md"
+                        >
+                          <Navigation size={18} />
+                          Get Directions
+                        </a>
+                      </div>
                     </div>
                   </motion.div>
                 )}
